@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yousef</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="/a.js"></script>-->
+
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        let url = "https://haji-api.ir/youtube?url=https://youtube.com/shorts/tn6paAY8Vsw?feature=share";
+
+
+        function hi() {
+            url = fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                var cotizaciones = data;
+                cotizaciones.forEach(cotizacion => {
+                    var nombre = cotizacion.name;
+                    var precio = cotizacion.dlink;
+                    //console.log(precio)
+                    var variacion = cotizacion.price_change_percentage_24h;
+                })
+
+            })
+
+            console.log(url)
+
+        };
+
+        hi()
+    </script>
+</body>
+</html>
